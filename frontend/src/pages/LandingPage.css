@@ -1,0 +1,122 @@
+:root {
+  --primary-navy: #0a0a35;
+  --accent-blue: #1e4b7a;
+  --text-white: #ffffff;
+  --soft-purple: #a288e3;
+}
+
+.landing-body {
+  background-color: var(--primary-navy);
+  color: var(--text-white);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Sarabun", sans-serif;
+}
+
+.landing-container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.illustration-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.svg-illustration {
+  width: 100%;
+  max-width: 500px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.content-side {
+  flex: 1;
+  text-align: center;
+  padding-left: 50px;
+}
+
+.welcome-text {
+  font-size: 2.2rem;
+  font-weight: 300;
+  
+  margin-bottom: 0.2rem;
+}
+
+.content-side h1 {
+  font-size: 4.4rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.sub-text {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+.enter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--accent-blue);
+  color: white;
+  padding: 18px 70px;
+  border-radius: 60px;
+  font-size: 1.6rem;
+  margin-top: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.enter-btn:hover {
+  background-color: transparent;
+  border-color: var(--text-white);
+  transform: translateY(-8px) scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .landing-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .content-side {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .content-side h1 {
+    font-size: 3.5rem;
+  }
+
+  .welcome-text,
+  .sub-text {
+    font-size: 1.5rem;
+  }
+
+  .svg-illustration {
+    max-width: 350px;
+  }
+}
