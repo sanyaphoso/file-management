@@ -3,7 +3,7 @@ node_modules/
 .env.*
 dist/
 build/
-coverage/
+coverage/   
 logs/
 *.log
 .DS_Store
